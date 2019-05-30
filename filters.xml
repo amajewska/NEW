@@ -1,0 +1,19 @@
+<customer>
+    <filters>
+        <filter ext="xml" root="survey" classelement="com.xmlintl.clients.languageconnect.conformit.LanguageConnectConformitXmlFilter" />
+        <filter ext="xml" root="Survey" classelement="com.xmlintl.clients.languageconnect.conformit.LanguageConnectConformitXmlFilter" />
+        <filter ext="csv" classelement="com.xmlintl.filters.csv.CsvFilter" />
+
+    <!-- ljendrysik | 25.04.17 | ticket 206895 -->
+    <filter ext="xlf" classelement="com.xmlintl.clients.languageconnect.filter.WorldServerXliffFilter" extclassloader="yes"/>
+
+    <reversors>
+     <!--reversor ext="skl"  classelement="com.xmlintl.reverse.xlf.easyling.EasylingXliffReversor" extclassloader="yes"/-->
+     <!--reversor ext="xliff"  classelement="com.xmlintl.reverse.xlf.easyling.EasylingXliffReversor" extclassloader="yes"/-->
+        <reversor ext="csv" classelement="com.xmlintl.reverse.CsvReversor" />
+
+    <!-- ljendrysik | 25.04.17 | ticket 206895 -->
+    <reversor ext="xlf"  classelement="com.xmlintl.clients.languageconnect.reversor.WorldServerXliffReversor" extclassloader="yes"/>
+    </reversors>
+    </filters>
+</customer>
